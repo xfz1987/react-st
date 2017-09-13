@@ -1,0 +1,6 @@
+.Bar_xfz .bar {
+  margin-bottom: 10px;
+}
+.Bar_xfz .bar input[type="number"] {
+  width: 50px;
+}
