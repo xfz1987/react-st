@@ -113,3 +113,21 @@ render() {
 > - createMemoryHistory 主要用于服务器渲染,它创建一个内存中的history对象,不与浏览器URL互动
 > ```const history = createMemoryHistory(location)```
 
+## 表单处理
+> Link组件用于正常的用户点击跳转，但是有时还需要表单跳转、点击按钮跳转等操作
+```
+//方法是使用browserHistory.push
+import { browserHistory } from 'react-router'
+<form onSubmit={this.handleSubmit}>
+  <input type="text" placeholder="userName"/>
+  <input type="text" placeholder="repo"/>
+  <button type="submit">Go</button>
+</form>
+handleSubmit(event) {
+    event.preventDefault()
+    const userName = event.target.elements[0].value
+    const repo = event.target.elements[1].value
+    const path = `/repos/${userName}/${repo}`
+    browserHistory.push(path)
+}
+```
