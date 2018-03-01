@@ -14,7 +14,7 @@ class BBB extends React.Component {
 	}
 	change(){
 		this.setState({
-			wh: true
+			wh: !this.state.wh
 		})
 	}
 	render(){
@@ -22,7 +22,9 @@ class BBB extends React.Component {
 			<div>
 				<Prompt message={this.test} when={this.state.wh}/>
 				<p>B默认页面</p>
-				<button onClick={this.change}>启动离开时提示</button>
+				<p>路由传值: {this.props.location.search}</p>
+				<p>是否启动离开时提示: {this.state.wh ? '开' : '关'}</p>
+				<button onClick={this.change}>{this.state.wh ? '关闭' : '开启'}</button>
 			</div>
 		);
 	}

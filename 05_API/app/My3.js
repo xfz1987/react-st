@@ -8,7 +8,7 @@ class My3 extends React.Component{
 	}
 
 	change(){
-		var box = this.refs.box;
+		const box = this.refs.box;
 		box.style.background = 'orange';
 	}
 

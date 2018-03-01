@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --inline",
     "build": "webpack"
   },
   "keywords": [],
@@ -19,8 +19,8 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "style-loader": "^0.19.0",
-    "webpack": "^3.6.0",
-    "webpack-dev-middleware": "^1.12.0"
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
     "react-router-dom": "^4.2.2",

@@ -30,7 +30,7 @@ class App extends Component{
 		//返回一个jsx语法
 		return (
 			<div>
-				<h1>姑娘，很高兴遇见您！说{5000+5000}次我爱你</h1>
+				<h1>姑娘，很高兴遇见您！说{5000+5001}次我爱你</h1>
 				{this.haha('NBA')}
 				<div style={{"color":"green"}}>HaHa</div>
 				<ul>{arr}</ul>

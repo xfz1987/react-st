@@ -1,5 +1,5 @@
 import React from 'react';
-import './css.less';
+import './bar.less';
 
 class Bar extends React.Component{
 	constructor(props){

@@ -9,7 +9,7 @@ class Sz extends React.Component{
 	render(){
 		return (
 			<div>
-				<p style={{color:red;}}>你不行</p>
+				<p style={{color:'red'}}>你不行</p>
 				<h3>我是孙子组件 {this.context.a} <input type="button" value="click" onClick={()=>{this.context.a++;alert(this.context.a)}} /></h3>
 				<p>你行</p>
 				<h3>我是孙子组件 {this.context.a} <input type="button" value="click" onClick={this.context.addA} /></h3>

@@ -1,19 +1,12 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './app/main.js',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'temp/'
-  },
-  devServer: {
-  	contentBase: './',
-  	host: 'localhost',
-  	port: 9000,
-  	// inline: false,
-  	watchContentBase: true,
-  	compress: true
+    publicPath: 'dist/'
   },
   module: {
     rules: [
@@ -35,5 +28,15 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  devServer: {
+    contentBase: './',
+    historyApiFallback:true,
+    port: '8080',
+    inline: true,
+    hot:true
+  },
 };

@@ -14,7 +14,7 @@ class My extends React.Component{
 		super();
 		this.state = {
 			isLike : true,
-			a: 1
+			a: 0.2
 		};
 		this.clickHandler = this.clickHandler.bind(this);
 		this.name = props.name || '瓜怂';
@@ -22,10 +22,13 @@ class My extends React.Component{
 	}
 
 	clickHandler(){
-		this.setState({isLike: !this.state.isLike});
+		this.setState({isLike: !this.state.isLike}, function(){
+
+		});
 	}
 
 	change(){
+		console.log(this);
 		this.replaceState({isLike: false});
 	}
 
@@ -63,11 +66,11 @@ class My extends React.Component{
 	render(){
 		return (
 			<div>
-				<h1 onClick={this.clickHandler}>you {this.state.isLike ? 'love' : 'hate'} me, click me to change state</h1>
+				<h1 onClick={this.clickHandler}>you {this.state.isLike ? 'love' : 'unlike'} film, click me to change state</h1>
 				<h2>{this.name}</h2>
-				<input type="button" value="click me" onClick={this.change} />
+				<input type="button" value="class方式不支持replaceState" onClick={this.change} />
 				<h3>{this.state.a}</h3>
-				<input type="button" value="click me" onClick={()=>{this.setState({a: Math.random()})}} />
+				<input type="button" value="Random" onClick={()=>{this.setState({a: Math.random()})}} />
 			</div>
 		);
 	}

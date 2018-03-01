@@ -1,8 +1,8 @@
 import React from "react";
 import {render} from "react-dom";
-import Home from "./pages/home";
-import Page1 from "./pages/page1";
-import Page2 from "./pages/page2";
+import Home from "./pages/home.js";
+import Page1 from "./pages/page1.js";
+import Page2 from "./pages/page2.js";
 import {Router, Route, hashHistory} from 'react-router';
 
 render((

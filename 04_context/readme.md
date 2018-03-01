@@ -43,7 +43,7 @@ class Sz extends React.Component{
 }
 ```
 
-> React引入三兄弟之一的conttext，来实现跨级传递，但是语法比较晦涩
+> React引入三兄弟之一的context，来实现跨级传递，但是语法比较晦涩
 > - 在顶层(爷爷)组件添加 设置后代的上下方法，并返回一个对象，这个对象就是现在这个家族体系共享的上下文，并将上下文中的属性值变为自己状态中的属性值
 > getChildContext(){ return {a: this.state.a}} 方法,
 > - 在顶层(爷爷)组件添加: 

@@ -12,7 +12,7 @@ class App extends Component{
 	render(){
 		return (
 			<div>
-				<My name="大神" v="12"/>
+				<My v="12"/>
 				<My2 />
 				<My3 />
 			</div>

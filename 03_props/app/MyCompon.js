@@ -8,12 +8,14 @@ class MyCompon extends Component{
 	//构造函数
 	constructor(props){
 		super();
-		console.log(props.a);
+		console.log(props.a, typeof props.a);//1 string
+		console.log(props.b, typeof props.b);//2 number
 		this.state = {
 			b : props.b,
 			d : props.d
 		};
-		this.setD = (number) => {
+		this.setD = () => {
+			var number = this.state.d + 1;
 			this.setState({d : number});
 			props.setD(number);
 		}
@@ -22,7 +24,7 @@ class MyCompon extends Component{
 	render(){
 		return (
 			<div>
-				<h1>我是MyCompon组件{this.props.a}\{this.props.b}</h1>
+				<h1>我是MyCompon组件：a-{this.props.a}\b-{this.props.b}</h1>
 				<p>b:{this.state.b}</p>
 				<p>
 					<input type="button" value="click me" onClick={()=>{this.setState({b: this.state.b+1})}} />
@@ -30,7 +32,7 @@ class MyCompon extends Component{
 				<p>c:{this.props.c}</p>
 				<p>d:{this.state.d}</p>
 				<p>
-					<input type="button" value="change d" onClick={()=>{this.setD(8)}} />
+					<input type="button" value="change d" onClick={()=>{this.setD()}} />
 				</p>
 			</div>
 		);

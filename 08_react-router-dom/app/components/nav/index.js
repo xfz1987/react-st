@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink,Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './index.css';
 
 const checkURL = (match, location) => {
@@ -15,13 +15,11 @@ const checkURL = (match, location) => {
 //<NavLink isActive={checkURL} to="/c/#/helloworld" activeClassName="blue">CCC|hash</NavLink> | &nbsp;
 const NavBar = () => (
 	<div>
-		<div>
-			<NavLink exact to="/" activeClassName="blue">AAA</NavLink> | &nbsp;
-			<NavLink to="/b" activeClassName="blue" activeStyle={{fontSize:"20px"}}>BBB</NavLink> | &nbsp;
-			<NavLink to="/c/helloworld/rt" activeClassName="blue">CCC|hash</NavLink> | &nbsp;
-			<NavLink to="/r">404</NavLink> | &nbsp;
-			<NavLink to="/zzz">error</NavLink>
-		</div>
+		<NavLink exact to="/" activeClassName="green">AAA</NavLink> | &nbsp;
+		<NavLink to="/b?id=5" activeClassName="green" activeStyle={{fontSize:"20px"}}>BBB</NavLink> | &nbsp;
+		<NavLink to="/c/helloworld/rt" activeClassName="green">CCC|hash</NavLink> | &nbsp;
+		<NavLink to="/r">404</NavLink> | &nbsp;
+		<NavLink to="/zzz">error</NavLink>
 	</div>
 );
 
