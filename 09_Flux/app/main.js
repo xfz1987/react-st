@@ -1,8 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
-import ListShow from './components/listShow';
-import SelectShow from './components/SelectShow';
-import _listData from './flux/stores';
+import ListShow from './components/listShow/';
+import SelectShow from './components/SelectShow/';
+import _listData from './flux/stores/';
+
+window._listData = _listData;
+
 
 class Default extends React.Component {
 	constructor(props){
@@ -10,10 +13,13 @@ class Default extends React.Component {
 		this.state = {
 			listData: _listData.getAll()
 		};
-		this._onChange = this._onChange.bind(this);
+        this._onChange = this._onChange.bind(this);
 	}
 	componentDidMount() {
         _listData.addChangeListener(this._onChange);
+    }
+    componentWillUnmount() {
+        _listData.removeChangeListener(this._onChange);
     }
     _onChange(){
     	this.setState({

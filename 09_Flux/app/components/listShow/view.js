@@ -1,5 +1,5 @@
 import React from 'react';
-import _listData from '../../flux/stores';
+// import _listData from '../../flux/stores';
 
 class View extends React.Component {
 	constructor(props){

@@ -11,7 +11,6 @@ module.exports = {
   	contentBase: './',
   	host: 'localhost',
   	port: 9000,
-  	// inline: false,
   	watchContentBase: true,
   	compress: true
   },

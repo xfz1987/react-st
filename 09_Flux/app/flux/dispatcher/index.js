@@ -1,5 +1,5 @@
 import {Dispatcher} from 'flux';
-import _listData from '../stores';
+// import listData from '../stores';
 
 const AppDispatcher = new Dispatcher();
 AppDispatcher.register(action => {
