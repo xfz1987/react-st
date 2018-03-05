@@ -7,10 +7,6 @@ import todoApp from './reducers';
 
 const store = createStore(todoApp);
 
-store.subscribe(() =>
-    console.log(store.getState())
-);
-
 render(
 	<Provider store={store}>
 		<App />

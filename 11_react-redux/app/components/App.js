@@ -8,6 +8,8 @@ export default class extends React.Component {
 		return (
 			<div>
 				<AddTodo />
+				<VisibleTodoList />
+				<Footer />
 			</div>
 		);
 	}

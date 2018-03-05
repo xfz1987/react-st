@@ -1,7 +1,7 @@
 import React from 'react';
 import { addTodo } from '../actions';
 
-class AddTodo extends React.Component {
+export default class extends React.Component {
 	render(){
 		const { dispatch } = this.props;
 		return (
@@ -18,4 +18,4 @@ class AddTodo extends React.Component {
 			</div>
 		);
 	}
-}
+};

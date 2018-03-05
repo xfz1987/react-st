@@ -8,6 +8,7 @@ import {createStore, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 // const store = createStore(items);
 const store = createStore(items, applyMiddleware(logger));
+console.log(store);
 
 import axios from 'axios';
 

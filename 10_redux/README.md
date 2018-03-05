@@ -27,6 +27,7 @@ export default (state = {
 > store.dispatch({type:'xxx'})
 > ```
 > 4.监听变化
+> - redux只能监听方法，因此要把render抽离出为一个函数，通过监听这个函数进行更改视图
 > store.subscribe(render);
 
 ## redux中间件
