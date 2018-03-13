@@ -29,7 +29,7 @@ axios.defaults.headers = {
 //http request 拦截器
 axios.interceptors.request.use(config => {
     	console.log('显示loading');
-    	// const token = localStorage.get('token');//getCookie('名称');注意使用的时候需要引入cookie方法，推荐js-cookie
+    	// const token = localStorage.get('token');//getCookie('名称');注意使用的时候需要引入cookie方法，推荐js-cookie 
     	config.data = JSON.stringify(config.data);
     	// if(token){
     	//   config.headers.Token = token;

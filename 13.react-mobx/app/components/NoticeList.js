@@ -6,17 +6,19 @@ import { observer } from 'mobx-react';
 class NoticeList extends React.Component {
     constructor(){
         super();
-        noticeStore.init();
     }
     render(){
         return (
-            <ul>
-              {
-                 !!noticeStore.noticeList.length
-                 && !this.props.show
-                 && noticeStore.noticeList.map((notice, index) => <li key={ index }> { notice.subject } </li>)
-              }
-            </ul>
+            <div>
+              <button onClick={noticeStore.init}>通知</button>
+              <ul>
+                {
+                   !!noticeStore.noticeList.length
+                   && !this.props.show
+                   && noticeStore.noticeList.map((notice, index) => <li key={ index }> { notice.subject } </li>)
+                }
+              </ul>
+            </div>
         )
     }
 }

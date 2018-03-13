@@ -6,7 +6,7 @@ import hostUser from '../stores/hostUseStore.js';
 export default class Test extends React.Component {
    	render() {
         return (
-          <div>我与User共享数据 { hostUser.user.name }</div>
+          <div>我与User共享数据，用户ID: { hostUser.userId }</div>
         )
     }
 }

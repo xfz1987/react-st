@@ -1,4 +1,4 @@
-import {observable, action, useStrict, runInAction} from 'mobx';
+import {observable, action, useStrict, runInAction, computed} from 'mobx';
 import http from '../common/utils/http.js';
 
 useStrict(true);
@@ -14,6 +14,9 @@ class HostUser {
         runInAction(() => {
               this.user = data;
         });        
+    };
+    @computed get userId(){
+        return this.user.id; 
     };
 }
 

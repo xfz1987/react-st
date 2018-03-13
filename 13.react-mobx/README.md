@@ -259,3 +259,23 @@ class HostUser {
 export default new HostUser()
 //A和B都引了该store，只会执行一次，而不会重复执行
 ```
+## 开发经验
+**把业务处理放置于store中，让组件尽量与业务解耦**
+1.store公用（顶层）- 推荐，便于管理
+```
+把公用的store提出来放置在公共store中，stores/index.js，放置于顶层，通过props一层一层往下传，或者使用context跨级传
+而不需公共使用的store就根据组件按需引入
+```
+
+2.全部按需加载store，来看看以下几种情况的用法
+```bash
+情况一: 组件A 引入 stroeA，组件B 也引入 storeA
+storeA: export default new storeA();
+//mobx内部实现了单例模式，storeA内部只会执行一次，这样组件A/B就可以共享storeA的observable数据了，而不必担心数据不统一
+
+情况二: 组件A 引入 storeA, 组件B 引入 storeB, storeB 引入 storeA
+【storeeA的监听数据是同步数据，而不是异步接口获取的数据】
+storeB能共享storeA的数据，storeA.yourData
+【storeA的监听数据是经过异步接口处理的数据，storeB想使用需要特殊处理】
+
+```
