@@ -276,6 +276,12 @@ storeA: export default new storeA();
 情况二: 组件A 引入 storeA, 组件B 引入 storeB, storeB 引入 storeA
 【storeeA的监听数据是同步数据，而不是异步接口获取的数据】
 storeB能共享storeA的数据，storeA.yourData
-【storeA的监听数据是经过异步接口处理的数据，storeB想使用需要特殊处理】
-
+【storeA的监听数据是经过异步接口处理的数据，storeB需要在action里面使用storeA的数据】
+@action getNoticeList = async () => {
+    alert(`storeA数据: ${hostUser.user.name}`);
+    const data = await http.get('mock/noticeList.json');
+    runInAction(() => {
+        this.noticeList = data;
+    });
+};
 ```

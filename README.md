@@ -24,7 +24,14 @@ react不是完整的MVC/MVVM框架，它只专注与提供清晰、简洁的视�
 > - 批量DOM操作以及虚拟DOM变化检测将由React处理
 > - 虚拟DOM变化检测
 >   当修改DOM时，React会将修改的虚拟DOM节点标记为修改过(dirty)，在事件循环结束时，会对所有修改过的虚拟DOM节点进行处理，并映射到真实DOM
-![](mdImg/diff.png) ![](mdImg/diff_show.png)
+![](mdImg/diff.png) 
+![](mdImg/dom-diff.png)
+```
+总结: 
+1.react，状态可以实时修改，每次setState改变状态，都会会触发render，render要先进行dom-diff，
+2.props只触发一次render
+```
+![](mdImg/diff_show.png)
 2.组件开发: 组件片段化，便于开发复用、管理与维护
 3.适用多端: 一处开发，多端适用
 ![](mdImg/duo.png)
