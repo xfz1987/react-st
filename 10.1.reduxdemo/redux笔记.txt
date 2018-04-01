@@ -1,8 +1,4 @@
-1.引入相对应的js文件 470kb
-2.ReactRedux Provider 链接了 view+store
-  <Provider store={store}>
-    <App/>
-  </Provider>
+
 3.reducer区分action 复用 ActionTypes 
 3.actions 给用户用的 动作 
   action分成同步动作 异步的动作 reducer不能处理异步的任务
