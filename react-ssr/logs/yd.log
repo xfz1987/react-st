@@ -1,0 +1,11 @@
+[2018-05-09T16:15:47.210] [ERROR] cheese - TypeError: ctx.render is not a function
+    at IndexController.getUser (E:\一灯大师\三大框架\react-st\react-ssr\dist\controllers\IndexController.js:50:30)
+    at memberInvoker (E:\一灯大师\三大框架\react-st\react-ssr\node_modules\awilix-koa\lib\invokers.js:80:45)
+    at dispatch (E:\一灯大师\三大框架\react-st\react-ssr\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\一灯大师\三大框架\react-st\react-ssr\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\一灯大师\三大框架\react-st\react-ssr\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\一灯大师\三大框架\react-st\react-ssr\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\一灯大师\三大框架\react-st\react-ssr\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\一灯大师\三大框架\react-st\react-ssr\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (E:\一灯大师\三大框架\react-st\react-ssr\node_modules\koa-compose\index.js:42:32)
+    at E:\一灯大师\三大框架\react-st\react-ssr\node_modules\koa-compose\index.js:34:12
